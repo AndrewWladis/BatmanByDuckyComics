@@ -1,0 +1,25 @@
+html {
+    background-color: grey;
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+.choose {
+    display: flex;
+    justify-content: space-around;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
