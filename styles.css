@@ -21,5 +21,4 @@ html {
 .credits {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
