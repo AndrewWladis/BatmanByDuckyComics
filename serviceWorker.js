@@ -1,0 +1,73 @@
+const DuckyComics = "Ducky-Comics"
+const assets = [
+    "/",
+    ".gitignore",
+    "ahead.html",
+    "batcave.html",
+    "batLogo.png",
+    "batman.png",
+    "batman-damned.jpeg",
+    "batman-the-dark-knight-returns-joker.jpeg",
+    "batman-who-laughs.jpeg",
+    "batmanAndRobin.jpeg",
+    "batmanShadow.jpeg",
+    "broken.html",
+    "carousel2016.jpg",
+    "city.html",
+    "coaster.jpeg",
+    "crash.html",
+    "credits.html",
+    "fight.html",
+    "first.html",
+    "forward.html",
+    "funhouse.jpeg",
+    "green.html",
+    "harleyquinn.jpeg",
+    "HarleyQuinn1.jpeg",
+    "help.html",
+    "hole.html",
+    "holes.jpeg",
+    "hquinn.html",
+    "index.html",
+    "joker-vs-nightwing.jpeg",
+    "jokerCar.jpeg",
+    "jokerGun.jpeg",
+    "jokerJ.html",
+    "jokerWhack.jpeg",
+    "kill.html",
+    "mirror.png",
+    "nightwing.jpeg",
+    "Nightwing.png",
+    "Nightwing-thebatman.jpeg",
+    "nightwingA.jpeg",
+    "NightwingA.png",
+    "nightwingRobin.jpeg",
+    "pirate.html",
+    "playD.html",
+    "punch.html",
+    "purple.html",
+    "q.html",
+    "reason.html",
+    "red.html",
+    "ride.html",
+    "robin.html",
+    "robinBlood.jpeg",
+    "RobinDead.jpeg",
+    "robinJoker.jpg",
+    "robinRed.jpeg",
+    "scream.html",
+    "start.html",
+    "styles.css",
+    "talk.html",
+    "timDrake.png",
+    "wait.html"
+]
+
+self.addEventListener("install", installEvent => {
+    console.log("Trying to install servivce worker and in cache static assets");
+  installEvent.waitUntil(
+    caches.open(DuckyComics).then(cache => {
+      return cache.addAll(assets)
+    })
+  )
+})
